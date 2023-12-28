@@ -154,8 +154,8 @@ li {
   color: #ffffff;
   line-height: 27px;
   padding: 8px 36px;
-  background: burlywood;
-  border: 1px solid burlywood;
+  background: #0e3271;
+  border: 1px solid black;
   display: inline-block;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
@@ -166,8 +166,8 @@ li {
   -o-transition: all 0.5s ease;
 }
 .btn-style-one:hover {
-  color: #48bdc5;
-  border: 1px solid #48bdc5;
+  color: #012f5d;
+  border: 1px solid black;
   background: #ffffff;
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -179,11 +179,12 @@ li {
 .btn-style-two {
   font-size: 14px;
   font-weight: 600;
-  color: #222222;
+  color: white;
   line-height: 27px;
   padding: 8px 36px;
-  background: #f4f4f4;
-  border: 1px solid #ececec;
+  margin-left: 290px;
+  background: #97abbf;
+  border: 1px solid black;
   display: inline-block;
   text-transform: uppercase;
   font-family: "Source Sans Pro", sans-serif;
@@ -194,9 +195,9 @@ li {
   -o-transition: all 0.5s ease;
 }
 .btn-style-two:hover {
-  color: #ffffff;
-  border: 1px solid burlywood;
-  background: burlywood;
+  color: #012f5d;
+  border: 1px solid #c5d0d8;
+  background: #c5d0d8;
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -292,8 +293,8 @@ li {
   transition: 0.3s;
 }
 .header-top .top-right .social-links li:hover i {
-  color: burlywood;
-  border-color: burlywood;
+  color:  #012f5d;
+  border-color:  #012f5d;
 }
 
 .header-uper {
@@ -325,10 +326,10 @@ li {
   border-radius: 50%;
   text-align: center;
   line-height: 57px;
-  border: 1px solid burlywood;
+  border: 1px solid  #012f5d;
 }
 .header-uper .contact-info .item .icon-box i:before {
-  color: burlywood;
+  color:   #012f5d;
   font-size: 22px;
 }
 .header-uper .contact-info .item strong {
@@ -353,7 +354,7 @@ li {
 
 .navbar {
   margin-bottom: 0;
-  background:burlywood;
+  background: #012f5d;
   border: none;
   border-radius: 0;
 }
@@ -672,7 +673,7 @@ button:focus {
   overflow: hidden;
 }
 .cta .cta-block .emmergency {
-  background: #48bdc5;
+  background: #333333;
 }
 .cta .cta-block .emmergency a {
   color: #fff;
@@ -682,7 +683,7 @@ button:focus {
   padding-top: 20px;
 }
 .cta .cta-block .top-doctor {
-  background: #5bc4cb;
+  background: gray;
 }
 .cta .cta-block .top-doctor .btn-main {
   margin-top: 10px;
@@ -696,7 +697,7 @@ button:focus {
   color: #48bdc5;
 }
 .cta .cta-block .working-time {
-  background: #6fcbd1;
+  background: #333;
 }
 .cta .cta-block .working-time ul {
   margin: 0;
@@ -1557,7 +1558,7 @@ button:focus {
   content: "";
   width: 100%;
   height: 100%;
-  background: rgba(72, 189, 197, 0.7);
+  background: rgba(15, 20, 21, 0.7); 
 }
 .testimonial-section .section-title h3 {
   position: relative;
