@@ -227,6 +227,8 @@ li {
 
 .logo {
   display: inline-block;
+  height: 20vh;
+  width:60% ;
 }
 
 .single-page-header {
