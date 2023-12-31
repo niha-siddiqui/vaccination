@@ -2636,6 +2636,8 @@ button:focus {
 }
 .footer-main .footer-top .footer-logo {
   padding-bottom: 20px;
+  height:30vh ;
+  width: 60%;
 }
 .footer-main .footer-top p {
   font-size: 15px;
