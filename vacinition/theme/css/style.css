@@ -227,8 +227,10 @@ li {
 
 .logo {
   display: inline-block;
-  height: 20vh;
-  width:60% ;
+  height: 10vh;
+  width:50% ;
+  margin-bottom: 40px;
+
 }
 
 .single-page-header {
@@ -530,7 +532,7 @@ button:focus {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 20px;
   display: block;
-  background: #48bdc5;
+  background: #333;
   color: #fff;
   padding: 20px 30px;
   transition: all 0.3s ease;
@@ -553,7 +555,7 @@ button:focus {
   font-weight: bold;
 }
 .accordion-section .accordion-holder .card .card-header h4 a.collapsed:hover {
-  color: #48bdc5;
+  color: #21474a;
 }
 .accordion-section .accordion-holder .card .card-body {
   padding: 20px 30px;
