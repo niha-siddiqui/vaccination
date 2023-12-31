@@ -16,7 +16,7 @@ const plumber = require("gulp-plumber");
 var path = {
   src: {
     html: "source/*.html",
-    others: "source/*.+(php|ico|png)",
+    others: "source/*.+(html|ico|png)",
     htminc: "source/partials/**/*.htm",
     incdir: "source/partials/",
     plugins: "source/plugins/**/*.*",
@@ -153,7 +153,7 @@ gulp.task("plugins:build", function () {
     );
 });
 
-// Other files like favicon, php, sourcele-icon on root directory
+// Other files like favicon, html, sourcele-icon on root directory
 gulp.task("others:build", function () {
   return gulp.src(path.src.others).pipe(gulp.dest(path.build.dirDev));
 });

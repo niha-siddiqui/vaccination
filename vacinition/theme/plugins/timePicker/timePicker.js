@@ -19,10 +19,10 @@
  *  Dual licensed under the:
  *
  *  -   MIT
- *      <http://www.opensource.org/licenses/mit-license.php>
+ *      <http://www.opensource.org/licenses/mit-license.html>
  * 
  *  -   GPL
- *      <http://www.opensource.org/licenses/gpl-license.php>
+ *      <http://www.opensource.org/licenses/gpl-license.html>
  *  
  *  User can pick whichever one applies best for their project
  *  and doesn not have to contact me.
