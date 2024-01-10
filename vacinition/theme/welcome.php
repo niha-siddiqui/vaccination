@@ -38,20 +38,21 @@ $result2 = mysqli_query($connection, $query2);
     $newquery = mysqli_query($connection,"select * from hospital where user_name = '$new' ");
     $filter = mysqli_fetch_assoc($newquery);
     // echo $filter[''];
-
+    include("header.php");
     
    if(isset($_POST['logout'])){
     session_destroy();
     header("location:login.php");
   }
+
     ?>
     <br>
 
     <!-- table -->
-    <div class="container" style="display: flex; align-items: center; justify-content: center;">
-    <img class="circle" style="width: 140px; height: 140px; border: 1px solid black; border-radius:50%;" src="php/pictures/<?php echo $filter['user_image'] ?>" >
-</div>
+   
+    <img class="circle" style="width: 130px; height: 130px; display: flex;margin-left:620px;box-shadow:3px 3px 3px grey; " src="pictures/<?php echo $filter['user_image'] ?>">
 
+<br>
    
 <h1 class="display-3 text-center"><?php echo $new ?></h1>
 <br>
@@ -150,7 +151,10 @@ $result2 = mysqli_query($connection, $query2);
         </tbody>
     </table>  
 
-
+    <br><br><br><br><br><br><br><br>
+<?php
+    include("footer.php");
+?>
 
 </body>
 </html>

@@ -1,4 +1,5 @@
 <?php
+
 include ('connection.php');
 session_start();
 
@@ -17,6 +18,8 @@ $result2 = mysqli_query($connection, $query2);
 
 $query3 = " select count(*) as total from parents p JOIN hospital h ON p.hospital_id = h.hospital_id where status_id= 2 and  h.user_name = '$user' "; 
 $result3 = mysqli_query($connection, $query3);
+
+
 ?>
 
 
@@ -158,13 +161,7 @@ $result3 = mysqli_query($connection, $query3);
 
 <?php
 
- 
-if(isset($_POST['logout'])){
-  session_destroy();
-  header("location:login.php");
 
-
-}
 
 if ($result1) {
   $row = mysqli_fetch_assoc($result1);
@@ -190,6 +187,14 @@ if ($result3) {
 } else {
   $vaccinatedParents = 0; 
 }
+include("header.php");
+ 
+if(isset($_POST['logout'])){
+  session_destroy();
+  header("location:login.php");
+
+
+}
 ?>
 
 
@@ -197,8 +202,7 @@ if ($result3) {
 <div class="banner">
   <h1>Welcome to Hospital Portal</h1>
 </div>
-<a href="profile.php">my profile</a>
-<a href="welcome.php">show records</a>
+
 <br>
 <p class="vaccine-paragraph">Vaccination plays a crucial role in preventing infectious diseases, protecting individuals and communities from severe illnesses, and contributing to public health. It helps build immunity, reducing the spread of harmful viruses and ensuring a healthier future for everyone.</p>
 <br><br>
@@ -249,5 +253,10 @@ if ($result3) {
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis repudiandae esse.</p>
   </div>
 </div>
+
+<br><br><br><br><br><br><br><br>
+<?php
+    include("footer.php");
+?>
 </body>
 </html>

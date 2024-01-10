@@ -11,13 +11,13 @@ include('connection.php');
 
 </head>
 <body style="background-color: rgb(228, 247, 248);">
-    <!-- image -->
-<img src="pictures/thinking1.png" height="77%" width="33%" style="position: fixed;top: 10%; right: 60%;">
+
 <!-- form -->
-<div class="login-box" style="width: 350px;position: fixed;top: 30%; left: 56%;height: 500px;" >
+<div class="hero" style="height:505px; width:515px;position: fixed;top: 8%; left: 480px;box-shadow:3px 3px 13px black;">
+<div class="login-box" style="width: 350px;position: fixed;top: 30%; left: 41%;height: 500px;" >
 
     <form action="" method="post">
-    <h3 style="position: fixed;top:20%; left: 59%;"> LOG-IN YOURSELF !</h3>
+    <h3 style="position: fixed;top:20%; left: 42%;"> LOG-IN YOURSELF !</h3>
         <input type="text" class="form-control mt-1" name="user" placeholder="user_name" required >
       
         <input type="password"class="form-control mt-1" name ="pass" placeholder="password" required >
@@ -26,6 +26,7 @@ include('connection.php');
     </form>
     <p style="font-size: 16px; margin-top: 20px;">Don't Have An Account?<a href="index.php"> SIGN-UP</a> Now..</p>
     <br>
+</div>
 </div>
     <?php
     session_start();

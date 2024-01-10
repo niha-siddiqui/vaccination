@@ -13,12 +13,9 @@
 <body style="background-color: rgb(228, 247, 248);">
         <br>
         <br>
-        <!-- picture -->
-        <img src="pictures/communications.png" height="77%" width="33%" style="position: fixed;top: 10%; right: 60%;">
-        <!-- form -->
-        <div class="singup-box" style="width:400px; position: fixed; top: 15%; left: 56%; height: 400px;" >
-        <h3 style="position: fixed;top:10%; left: 59%;"> SIGN-UP YOURSELF !</h3>
-
+   
+        <div class="singup-box" style="width:400px; position: fixed; top: 15%; left: 38%; height: 400px;" >
+        <h3 style="position: fixed;top:10%; left: 39%;"> SIGN-UP YOURSELF !</h3><br>
         <form method="post" enctype = "multipart/form-data" class="form" >
         <input class="form-control mt-3" placeholder="user_name" type="text" name="user_name"  required >
         <input class="form-control mt-3" placeholder="user_email" type="email" name="user_email"  required >
@@ -31,5 +28,6 @@
         <input class="btn btn-dark mt-2 w-100 " type="submit" name="submit" value="Submit">
     </form>
 </div>
+
 </body>
 </html>

@@ -7,7 +7,7 @@
     $hospital_location = $_POST['hospital_location'];
     $hospital_number = $_POST['hospital_number'];
     $number_of_departments = $_POST['number_of_departments'];
-    $folder = "php/pictures/";
+    $folder = "pictures/";
     $filename = basename($_FILES['user_image'] ['name']);
     $final = $folder .$filename;
 
@@ -24,7 +24,7 @@
 
 
     $result = mysqli_query($connection, $query);
-    header("location:welcome.php");
+    header("location:hospital.php");
  }
    }
    
