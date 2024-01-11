@@ -1,7 +1,7 @@
 <?php 
      $host = "localhost";
      $user = "root";
-     $password = "mehreenfaiz#3";
+     $password = "";
      $dbconnect = "vaccinations_system";
 
      $connection = mysqli_connect($host,$user,$password,$dbconnect);

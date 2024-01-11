@@ -26,6 +26,7 @@
         <input class="form-control mt-3" placeholder="user_image" type="file" name="user_image">
 <br>
         <input class="btn btn-dark mt-2 w-100 " type="submit" name="submit" value="Submit">
+        <a href="login.php">alos have an account</a>
     </form>
 </div>
 
