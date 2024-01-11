@@ -50,7 +50,7 @@ if (isset($_GET['accept_id_p'])) {
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Appointment vaerification mail';
+            $mail->Subject = 'Appointment verification mail';
             $mail->Body = 'Your appointment for hospital ' . $user_hospital . ' <b>is accepted</b>';
             $mail->AltBody = 'your appointment for' . $user_hospital . 'is on next sunday';
 
@@ -98,7 +98,7 @@ if (isset($_GET['accept_id_p'])) {
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Appointment vaerification mail';
+            $mail->Subject = 'Appointment verification mail';
             $mail->Body = "Your appointment for hospital " . $user_hospital . " <b>is not accepted due some hospital's issues</b>";
             $mail->AltBody = 'your appointment for' . $user_hospital . 'is on next sunday';
 
@@ -145,7 +145,7 @@ if (isset($_GET['accept_id_p'])) {
 
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Appointment vaerification mail';
+            $mail->Subject = 'Appointment verification mail';
             $mail->Body = "your request is accept nwo ypu can use your account ";
             $mail->AltBody = '';
 
@@ -192,8 +192,8 @@ if (isset($_GET['accept_id_p'])) {
     
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
-            $mail->Subject = 'Appointment vaerification mail';
-            $mail->Body = 'your request for adding the hosital at vaccinations_system is not approve due to some rsit issues';
+            $mail->Subject = 'Appointment verification mail';
+            $mail->Body = 'your request for adding the hosital at website vaccinations system is not approve due to some issues';
             $mail->AltBody = 'your appointment for is on next sunday';
     
             $mail->send();

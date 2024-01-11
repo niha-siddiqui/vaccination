@@ -10,8 +10,7 @@ if ($data_chk['status'] == 'pending') {
 } else {
   if (!isset($_SESSION['name'])) {
     header("location:login.php");
-  }
-  ;
+  };
   $query = "Select * from hospital ";
   $result = mysqli_query($connection, $query);
 
