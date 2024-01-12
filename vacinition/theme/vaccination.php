@@ -85,20 +85,22 @@ if(isset($_POST['logout'])){
 <table class="table table-bordered w-50 mx-auto mt-5">
         <thead>
             <tr>
-                <th>NAME</th>
-              
+            <th class="text-center">S.no</th>
+                <th class="text-center">NAME</th>
             </tr>
         </thead>
         <tbody>
            <?php
               while($data = mysqli_fetch_assoc($result)){
 
-  
+                $vaccination_id = $data['vaccination_id'];
+
             $vaccination_name = $data['vaccination_name'];
             echo '
          <tr>
+            <td class="text-center">'.$vaccination_id.'</td>
+            <td class="text-center">'.$vaccination_name.'</td>
            
-            <td>'.$vaccination_name.'</td>
          </tr>'
          ?>
         

@@ -84,7 +84,7 @@ $result2 = mysqli_query($connection, $query2);
     <br>
     <h1 class="display-5 text-center">NOT VACCINATED</h1>
 
-    <div class="container" style="overflow:scroll;width:100vw">
+    <div class="container" style="width:100vw">
         <table class="table table-bordered w-100 mx-auto mt-5">
             <thead>
                 <tr>
@@ -155,7 +155,7 @@ $result2 = mysqli_query($connection, $query2);
 
     <!-- table -->
     <h1 class="display-5 text-center">ALL RECORD</h1>
-    <div class="container" style="overflow:scroll;width:100vw">
+    <div class="container" style="width:100vw">
         <table class="table table-bordered w-77 mx-auto mt-5">
             <thead>
                 <tr>

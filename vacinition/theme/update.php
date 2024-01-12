@@ -22,12 +22,14 @@ $all_data = mysqli_fetch_array($result);
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+
 </head>
 
 <body>
-<div class="singup-box" style="width:50%; position: fixed; top: 10%; left: 35%; height: 400px;" >
-<h3 style=" position: fixed;left: 38%;top: 10%; "> update the status !</h3>
-<form action="" method="post" style="position: fixed;top: 20%;width:30%; " > 
+    
+<div class="singup-box" style="width:50%; position: fixed; top: 30%; left: 35%; height: 400px;" >
+<h3 style=" position: fixed;left: 39.5%;top: 30%; "> Update The Status !</h3>
+<form action="" method="post" style="position: fixed;top: 45%;width:30%; " > 
 
 <select class="form-select form-control mt-1" name="status_id">
             <!-- <option value="">Select Status</option> -->

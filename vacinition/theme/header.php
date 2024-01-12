@@ -81,7 +81,7 @@ FACEBOOK: https://www.facebook.com/themefisher
           <a class="nav-link" href="hospital.php"> Home</a>
         </li>
         <li class="nav-item @@about">
-          <a class="nav-link"href="welcome.php"> show records</a>
+          <a class="nav-link"href="welcome.php" > show records</a>
         </li>
         <li class="nav-item @@service">
           <a class="nav-link"  href="profile.php"> my profile</a>
@@ -92,7 +92,7 @@ FACEBOOK: https://www.facebook.com/themefisher
         <li class="nav-item" style="margin-right: 15px;">
           <!-- <a class="nav-link" href="" style="font-size: 1.1rem;" name="logout">log-out</a> -->
           <form method="post">
-          <button type= "submit" style="font-size: 1.5rem; background-color: transparent; color: white;margin-top:6px;margin-left:510px; "  name="logout"> log-out</button>
+          <button type= "submit" class="btn btn-outline-light" style="font-size: 1.3rem; background-color: transparent; color: white;margin-top:6px;margin-left:500px; "  name="logout"> log-out</button>
           </form>
         </li>
         <!-- <li class="nav-item @@team">

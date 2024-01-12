@@ -36,150 +36,101 @@ if ($data_chk['status'] == 'pending') {
     <title>Document</title>
   </head>
   <style>
-    /* Styling for the banner container */
-    /* Your existing styles */
-    .banner {
-      background-image: url('images/doctor.jpg');
-      /* Replace with your image path */
-      background-size: cover;
-      background-position: center;
-      height: 360px;
-      /* Set your desired height */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      /* Ensures the overlay doesn't overflow */
-      transition: background-image 0.5s ease-in-out;
-      position: relative;
-    }
-
-    /* Style for the heading text */
-    .banner h1 {
-      font-size: 3.5em;
-      margin-top: 90px;
-      text-shadow: black 5px 5px 5px;
-      transition: text-shadow 0.5s ease-in-out;
-      /* Add transition for text-shadow */
-    }
-
-    /* Overlay with blackish shade */
-    .banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      /* Adjust opacity for your shade */
-      opacity: 0;
-      /* Initially hidden */
-      transition: opacity 0.5s ease-in-out;
-      /* Add transition for the overlay */
-    }
-
-    /* Show overlay on hover */
-    .banner:hover::before {
-      opacity: 0.5;
-    }
+   
 
     /* Styling for the container of vaccine information */
-    .info {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px 0;
-    }
+    .vaccine-heading {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+            margin: 0;
+        }
 
-    /* Styling for individual vaccine sections */
-    .vaccine {
-      text-align: center;
-      width: 30%;
-      display: flex;
-      flex-direction: column;
+       
+  
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-70px);
     }
-
-    /* Styling for vaccine images */
-    .vaccine img {
-      width: 99%;
-      height: 200px;
-      /* Adjust this value as needed for the desired height */
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      transition: transform 0.3s ease-in-out;
-      /* Transition effect */
+    100% {
+        opacity: 5;
+        transform: translateY(0);
     }
+}
 
-    /* Hover effect for images */
-    .vaccine img:hover {
-      transform: scale(1.1);
-      /* Increase size on hover (adjust as desired) */
-    }
+.vaccine-paragraph {
+    text-align: center;
+    opacity: 2; /* Initially set opacity to 0 */
+    animation: slideIn 5s ease-out forwards;
+    font-size:20px;
+}
 
-    /* Styling for vaccine headings */
-    .vaccine h2 {
-      font-size: 1.5em;
-      margin-bottom: 5px;
-    }
+/* Apply the transition effect on hover or active state */
+.vaccine-paragraph:hover,
+.vaccine-paragraph:active {
+    opacity: 1;
+}
 
-    /* Styling for vaccine descriptions */
-    .vaccine p {
-      font-size: 1em;
-      line-height: 1.4;
-    }
 
-    /* Styling for vaccine paragraph */
-    .vaccine-paragraph {
-      font-size: 1.3em;
-      line-height: 1.6;
-      max-width: 70%;
-      margin: 20px 0 0 200px;
-      text-align: center;
-    }
+.info-heading {
+    background-color: transparent;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: background-color 0.5s, color 0.5s;
+    position: relative;
+}
 
-    .grid-container {
+.info-heading::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    transform: scaleX(1); /* Initially set to full width */
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+}
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      /* Three columns */
-      gap: 20px;
-      /* Gap between grid items */
-      padding: 20px;
-    }
 
-    .grid-item {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+        .info-heading:hover {
+            background-color: #ffffff;
+        }
 
-    .info-heading,
-    .vaccine-heading,
-    .data {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        .grid-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 20px auto;
+        }
 
-    .grid1 {
-      background-color: #549895;
-      border: 1px solid black;
-    }
+        .grid-item {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            margin: 10px;
+           
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
 
-    .grid2 {
-      background-color: #8EBCB1;
-      border: 1px solid black;
-    }
+        .grid-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
 
-    .grid3 {
-      background-color: #95C4B4;
-      border: 1px solid black;
-    }
+        .data {
+            color: #333;
+            font-size: 18px;
+        }
+
   </style>
 
   <body>
@@ -223,73 +174,124 @@ if ($data_chk['status'] == 'pending') {
     }
     ?>
 
-
-    <br>
-    <div class="banner">
-      <h1>Welcome to Hospital Portal</h1>
+<div class="hero-slider">
+  <!-- Slider Item -->
+  <div class="slider-item slide1" style="background-image:url(images/doctor.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content style text-center">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInLeft">Welcome to Hospital Portal</h2>
+            
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
     </div>
-
-    <br>
-    <p class="vaccine-paragraph">Vaccination plays a crucial role in preventing infectious diseases, protecting
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url(images/slider/slidenew2.jpg);">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start-->
+          <div class="content style text-center">
+            <h2 class="text-white" data-animation-in="slideInRight">"Medicines cure diseases, but only doctors can cure patients."</h2>
+          </div>
+          <!-- Slide Content End-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slider Item -->
+  <div class="slider-item" style="background-image:url(images/slider/slidenew1.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <!-- Slide Content Start -->
+          <div class="content text-center style">
+            <h2 class="text-white text-bold mb-2" data-animation-in="slideInRight">Our Best Doctors</h2>
+          </div>
+          <!-- Slide Content End -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+ 
+    <p class="vaccine-paragraph text-center"><b>Vaccination plays a crucial role in preventing infectious diseases, protecting
       individuals and communities from severe illnesses, and contributing to public health. It helps build immunity,
-      reducing the spread of harmful viruses and ensuring a healthier future for everyone.</p>
+      reducing the spread of harmful viruses and ensuring a healthier future for everyone.</b></p>
     <br><br>
 
-    <h1 class="info-heading">INFORMATION ABOUT HOSPITAL</h1>
-
-    <div class="grid-container">
-      <div class="grid-item">
+   <h1 class="info-heading">INFORMATION ABOUT HOSPITAL</h1>
+<br>
+<div class="grid-container">
+    <div class="grid-item">
         <div class="grid1">
-          <br>
-          <h3 class="data">Total Visitors:
-            <?php echo $totalParents; ?>
-          </h3>
-          <br>
+            <h3 class="data">Total Visitors: <?php echo $totalParents; ?></h3>
         </div>
-      </div>
+    </div>
 
-      <div class="grid-item">
+    <div class="grid-item">
         <div class="grid2">
-          <br>
-          <h3 class="data">
-            <?php echo $user; ?> Patients:
-            <?php echo $hospitalParents; ?>
-          </h3>
-          <br>
+            <h3 class="data"><?php echo $user; ?> Patients: <?php echo $hospitalParents; ?></h3>
         </div>
-      </div>
+    </div>
 
-      <div class="grid-item">
+    <div class="grid-item">
         <div class="grid3">
-          <br>
-          <h3 class="data"> Vaccinated Patients:
-            <?php echo $vaccinatedParents; ?>
+            <h3 class="data">Vaccinated Patients: <?php echo $vaccinatedParents; ?></h3>
+        </div>
+    </div>
+</div>
+
+<section class="gallery bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-title text-center">
+          <h3>Vaccination Shots
+            <span>of Our Hospitals</span>
           </h3>
-          <br>
+          <p>Leverage agile frameworks to provide a robust synopsis for high level overv-
+            <br>iews. Iterative approaches to corporate strategy...</p>
         </div>
       </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery1.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery1.jpg"></a>
+          <h3>Facility 01</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery2.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery2.jpg"></a>
+          <h3>Facility 02</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <img loading="lazy" src="images/gallery/gallery3.jpg" class="img-fluid" alt="gallery-image">
+          <a data-fancybox="images" href="images/gallery/gallery3.jpg"></a>
+          <h3>Facility 03</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, in.</p>
+        </div>
+      </div>
+   
     </div>
+  </div>
+</section>
 
-    <h1 class="vaccine-heading">VACCINES</h1>
-    <br>
-    <div class="info">
-      <div class="vaccine">
-        <img src="images/polio-vaccine.webp" alt="Vaccine 1">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis repudiandae esse.</p>
-      </div>
 
-      <div class="vaccine">
-        <img src="images/flu.jfif" alt="Vaccine 2">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis repudiandae esse.</p>
-      </div>
 
-      <div class="vaccine">
-        <img src="images/images.jfif" alt="Vaccine 3">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo nobis repudiandae esse.</p>
-      </div>
-    </div>
-
-    <br><br><br><br><br><br><br><br>
+    <br><br>
     <?php
     include("footer.php");
     ?>
